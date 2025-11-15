@@ -22,12 +22,12 @@ void rfid_init() {
     
     // Initialize CS pin
     gpio_init(SPI_CS_PIN);
-    gpio_set_dir(SPI_CS_PIN, GPIO_OUT);
+    gpio_set_dir(SPI_CS_PIN, 1);
     gpio_put(SPI_CS_PIN, 1); // Deselect
     
     // Initialize RST pin
     gpio_init(RFID_RST_PIN);
-    gpio_set_dir(RFID_RST_PIN, GPIO_OUT);
+    gpio_set_dir(RFID_RST_PIN, 1);
     gpio_put(RFID_RST_PIN, 1);
     
     printf("RFID Driver Initialized (STUBBED)\n");
